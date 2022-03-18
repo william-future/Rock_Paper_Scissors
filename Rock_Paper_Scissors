@@ -30,22 +30,23 @@ possible_output = [rock, paper, scissors]
 print("Welcome to the Rock, Paper, Scissors game")
 
 human_choice = int(input("Choose 0 for rock, 1 for paper, and 2 for scissors "))
-
-print(f"You chose, {possible_output[human_choice]}")
-
-computer_choice = random.randint(0,2)
-
-print(f"The computer chose, {possible_output[computer_choice]}")
-
 if human_choice >= 3 or human_choice < 0: 
-  print("You typed an invalid number, you lose!") 
-elif human_choice == 0 and computer_choice == 2:
-  print("You win!")
-elif computer_choice == 0 and human_choice == 2:
-  print("You lose")
-elif computer_choice > human_choice:
-  print("You lose")
-elif human_choice > computer_choice:
-  print("You win!")
-elif computer_choice == human_choice:
-  print("It's a draw")
+  print("You typed an invalid number, you lose!")
+else: 
+  print(f"You chose,{possible_output[human_choice]}")
+  
+  computer_choice = random.randint(0,2)
+  
+  print(f"The computer chose, {possible_output[computer_choice]}")
+
+
+  if human_choice == 0 and computer_choice == 2:
+    print("You win!")
+  elif computer_choice == 0 and human_choice == 2:
+    print("You lose")
+  elif computer_choice > human_choice:
+    print("You lose")
+  elif human_choice > computer_choice:
+    print("You win!")
+  elif computer_choice == human_choice:
+    print("It's a draw")
